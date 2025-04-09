@@ -1,11 +1,13 @@
-import { Input } from "@/modules/ui/components/input";
+import React from "react";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import { Label } from "@/modules/ui/components/label";
 
 interface MobileFieldProps {
   id: string;
   label: string;
   placeholder?: string;
-  stylingOptions: any; // Add stylingOptions as a prop
+  stylingOptions?: any;
   required?: boolean;
   name?: string;
   value?: string;
@@ -16,7 +18,7 @@ export function MobileField({
   id,
   label,
   placeholder,
-  stylingOptions,
+  stylingOptions = {},
   required = false,
   name = id,
   value = "",
@@ -37,25 +39,39 @@ export function MobileField({
         {label}
       </Label>
 
-      {/* Input */}
-      <Input
-        id={id}
-        type="tel"
-        placeholder={placeholder || "Enter your mobile number..."}
-        onChange={(e) => onChange(e.target.value)} // Handle changes in the mobile input
-        required={required}
-        name={name}
-        className="w-full rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        style={{
-          fontFamily: stylingOptions.fontFamily || "Arial",
-          fontSize: stylingOptions.fontSize || "16px",
-          color: stylingOptions.textColor || "#000000",
-          backgroundColor: stylingOptions.backgroundColor || "#ffffff",
-          border: `1px solid ${stylingOptions.borderColor || "#d1d5db"}`,
-          padding: stylingOptions.padding || "8px",
-          borderRadius: stylingOptions.borderRadius || "6px",
-        }}
-      />
+      {/* Phone Input Field */}
+      <div className="relative">
+        <PhoneInput
+          country={"in"} // Default country
+          value={value}
+          onChange={(phone) => onChange(phone)}
+          inputProps={{
+            name,
+            required,
+            id,
+          }}
+          placeholder={placeholder || "Enter your mobile number"}
+          containerStyle={{
+            width: "100%", 
+          }}
+          inputStyle={{
+            width: "100%",
+            height: "40px",
+            fontFamily: stylingOptions.fontFamily || "Arial",
+            fontSize: stylingOptions.fontSize || "16px",
+            color: stylingOptions.textColor || "#000000",
+            backgroundColor: stylingOptions.backgroundColor || "#ffffff",
+            border: `1px solid ${stylingOptions.borderColor || "#d1d5db"}`,
+            padding: stylingOptions.padding || "8px",
+            borderRadius: stylingOptions.borderRadius || "6px",
+            paddingLeft: "50px", // Ensure space for flag dropdown
+          }}
+          buttonStyle={{
+            height: "40px",
+            borderRight: `1px solid ${stylingOptions.borderColor || "#d1d5db"}`,
+          }}
+        />
+      </div>
     </div>
   );
 }
