@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import { useState, useMemo, useRef } from "react";
 // import { AnimatePresence, motion } from "framer-motion";
 // import {
@@ -621,6 +622,9 @@
 
 
 import { useState, useMemo, useRef, useEffect } from "react";
+=======
+import { useState, useMemo, useRef } from "react";
+>>>>>>> 99663ffbef49c40f8107a13840c50d2d9fc52ba3
 import { AnimatePresence, motion } from "framer-motion";
 import { useSortable } from "@dnd-kit/sortable";
 import {
