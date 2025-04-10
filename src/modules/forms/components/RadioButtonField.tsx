@@ -5,7 +5,7 @@ interface RadioButtonFieldProps {
   id: string;
   label: string;
   options: { value: string; label: string }[];
-  stylingOptions: any; // Add stylingOptions as a prop
+  stylingOptions: any; 
   required?: boolean;
   name?: string;
   value?: string;
@@ -30,7 +30,7 @@ export function RadioButtonField({
         className="block text-sm font-medium mb-2"
         style={{
           color: stylingOptions.textColor || "#000000",
-          fontSize: stylingOptions.labelFontSize || "14px", // Use labelFontSize
+          fontSize: stylingOptions.labelFontSize || "14px",
           fontFamily: stylingOptions.fontFamily || "Arial",
         }}
       >
@@ -42,7 +42,7 @@ export function RadioButtonField({
         id={id}
         name={name}
         required={required}
-        onValueChange={onChange} // Handle changes in the radio group
+        onValueChange={onChange} 
       >
         {options.map((option) => (
           <div key={option.value} className="flex items-center space-x-2 mb-1">
@@ -61,7 +61,7 @@ export function RadioButtonField({
               className="text-sm font-normal"
               style={{
                 color: stylingOptions.textColor || "#000000",
-                fontSize: stylingOptions.fontSize || "14px", // Use fontSize
+                fontSize: stylingOptions.fontSize || "14px", 
               }}
             >
               {option.label}

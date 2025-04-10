@@ -9,8 +9,8 @@ interface CountryFieldProps {
   stylingOptions: any;
   required?: boolean;
   name?: string;
-  value?: string; // Optional: Can be used to set an initial value
-  onChange?: (value: string) => void; // Optional: Callback for external updates
+  value?: string; 
+  onChange?: (value: string) => void; 
 }
 
 interface CountryOption {
@@ -26,8 +26,8 @@ export function CountryField({
   stylingOptions,
   required = false,
   name = id,
-  value: initialValue = "", // Default to empty string if no value is provided
-  onChange = () => {}, // Default to no-op if no onChange is provided
+  value: initialValue = "", 
+  onChange = () => {}, 
 }: CountryFieldProps) {
   // Internal state to manage the selected value
   const [selectedValue, setSelectedValue] = useState(initialValue);
@@ -37,7 +37,7 @@ export function CountryField({
     label: country.name.common,
     value: country.name.common,
     code: country.cca2,
-    flag: `https://flagcdn.com/w40/${country.cca2.toLowerCase()}.png`, // Image URL for flag
+    flag: `https://flagcdn.com/w40/${country.cca2.toLowerCase()}.png`, 
   }));
 
   // Handle selection change
@@ -65,8 +65,8 @@ export function CountryField({
       <Select
         id={id}
         name={name}
-        value={countries.find((c) => c.value === selectedValue) || null} // Use internal state
-        onChange={handleSelectChange} // Handle selection internally
+        value={countries.find((c) => c.value === selectedValue) || null} 
+        onChange={handleSelectChange}
         options={countries}
         formatOptionLabel={(country) => (
           <div className="flex items-center">

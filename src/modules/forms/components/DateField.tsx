@@ -4,7 +4,7 @@ import { Label } from "@/modules/ui/components/label";
 interface DateFieldProps {
   id: string;
   label: string;
-  stylingOptions: any; // Add stylingOptions as a prop
+  stylingOptions: any; 
   required?: boolean;
   name?: string;
   value?: string;
@@ -28,7 +28,7 @@ export function DateField({
         className="block text-sm font-medium mb-1"
         style={{
           color: stylingOptions.textColor || "#000000",
-          fontSize: stylingOptions.labelFontSize || "14px", // Use labelFontSize
+          fontSize: stylingOptions.labelFontSize || "14px", 
           fontFamily: stylingOptions.fontFamily || "Arial",
         }}
       >
@@ -40,7 +40,7 @@ export function DateField({
         id={id}
         type="date"
         name={name}
-        onChange={(e) => onChange(e.target.value)} // Handle changes in the date input
+        onChange={(e) => onChange(e.target.value)} 
         required={required}
         className="w-full rounded-md shadow-sm focus:outline-none focus:ring-2 bg-white focus:ring-blue-500 focus:border-blue-500"
         style={{

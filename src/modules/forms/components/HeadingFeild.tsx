@@ -3,7 +3,7 @@ import { Label } from "@/modules/ui/components/label";
 interface HeadingFieldProps {
   id: string;
   label: string;
-  stylingOptions: any; // Add stylingOptions as a prop
+  stylingOptions: any; 
 }
 
 export function HeadingField({ id, label, stylingOptions }: HeadingFieldProps) {

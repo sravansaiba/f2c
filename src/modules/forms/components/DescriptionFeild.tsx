@@ -38,7 +38,7 @@ export function DescriptionField({
       {/* Textarea */}
       <textarea
         id={id}
-        placeholder={placeholder || "Enter your description..."}
+        placeholder={placeholder || ""}
         rows={4}
         onChange={(e) => onChange(e.target.value)} // Handle changes in the textarea
         required={required}

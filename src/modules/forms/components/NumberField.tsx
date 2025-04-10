@@ -41,7 +41,7 @@ export function NumberField({
       <Input
         id={id}
         type="number"
-        placeholder={placeholder || "Enter number..."}
+        placeholder={placeholder || ""}
         onChange={(e) => onChange(e.target.value)} // Handle changes in the number input
         required={required}
         name={name}

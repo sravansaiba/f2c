@@ -42,7 +42,7 @@ export function MobileField({
       {/* Phone Input Field */}
       <div className="relative">
         <PhoneInput
-          country={"in"} // Default country
+          country={"in"} 
           value={value}
           onChange={(phone) => onChange(phone)}
           inputProps={{
@@ -64,7 +64,7 @@ export function MobileField({
             border: `1px solid ${stylingOptions.borderColor || "#d1d5db"}`,
             padding: stylingOptions.padding || "8px",
             borderRadius: stylingOptions.borderRadius || "6px",
-            paddingLeft: "50px", // Ensure space for flag dropdown
+            paddingLeft: "50px", 
           }}
           buttonStyle={{
             height: "40px",

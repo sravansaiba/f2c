@@ -22,7 +22,7 @@ export function TextField({ id, label, placeholder, stylingOptions,required=fals
       <Input
         id={id}
         type="text"
-        placeholder={placeholder || "Enter text..."}
+        placeholder={placeholder || ""}
         onChange={(e)=>onChange(e.target.value)}
         // value={value}
         required={required}

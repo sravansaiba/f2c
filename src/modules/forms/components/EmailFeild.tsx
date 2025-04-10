@@ -5,7 +5,7 @@ interface EmailFieldProps {
   id: string;
   label: string;
   placeholder?: string;
-  stylingOptions: any; // Add stylingOptions as a prop
+  stylingOptions: any;
   required?: boolean;
   name?: string;
   value?: string;
@@ -41,8 +41,8 @@ export function EmailField({
       <Input
         id={id}
         type="email"
-        placeholder={placeholder || "Enter your email..."}
-        onChange={(e) => onChange(e.target.value)} // Handle changes in the email input
+        placeholder={placeholder || " "}
+        onChange={(e) => onChange(e.target.value)}
         required={required}
         name={name}
         className="w-full rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
